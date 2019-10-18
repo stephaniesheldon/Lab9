@@ -33,14 +33,14 @@ public class StackRestaurant<T> extends Restaurant<T> {
     /**
      * Add an order to the restaurant.
      * 
-     * @param order The order to be added.
+     * @param firstOrder The order to be added.
      * @return True. Because the StackRestaurant should resize if it runs out of room to store tickets, a ticket
      * should always be added, and this method should always return true.
      */
 	@Override
-	public boolean addOrder(Order<T> order)
+	public boolean addOrder(Order<T> firstOrder)
 	{
-		orderList.add(order);
+		orderList.add(firstOrder);
 		topOfStack ++;
 		return true;
 	}
